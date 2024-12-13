@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tez Yozish O'yini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tez Yozish O'yini</h1>
+        
+        <!-- Sozlamalar -->
+        <div class="settings">
+            <div class="setting-group">
+                <label for="language">Til:</label>
+                <select id="language">
+                    <option value="uzbek">O'zbek tili</option>
+                    <option value="english">English</option>
+                    <option value="russian">Русский</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label for="difficulty">Qiyinlik:</label>
+                <select id="difficulty">
+                    <option value="easy">Oson</option>
+                    <option value="medium">O'rta</option>
+                    <option value="hard">Qiyin</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label for="time">Vaqt:</label>
+                <select id="time">
+                    <option value="15">15 soniya</option>
+                    <option value="30">30 soniya</option>
+                    <option value="60">1 daqiqa</option>
+                    <option value="120">2 daqiqa</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Timer va Ball -->
+        <div class="info">
+            <div class="timer">Vaqt: <span id="timer">30</span></div>
+            <div class="score">Ball: <span id="score">0</span></div>
+        </div>
+
+        <!-- So'z ko'rsatish -->
+        <div class="word-display" id="wordDisplay">
+            O'yinni boshlash uchun tugmani bosing
+        </div>
+
+        <!-- Kiritish maydoni -->
+        <input type="text" id="input" disabled placeholder="Matn kiriting...">
+
+        <!-- Tugmalar -->
+        <button id="startButton">O'yinni boshlash</button>
+        <button id="statsButton">Statistikani ko'rish</button>
+
+        <!-- Natijalar -->
+        <div class="results" id="results" style="display: none;">
+            <h2>Natijalar:</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <p>Tezlik:</p>
+                    <span id="wpm">0 WPM</span>
+                </div>
+                <div class="result-item">
+                    <p>To'g'ri so'zlar:</p>
+                    <span id="correctWords">0</span>
+                </div>
+                <div class="result-item">
+                    <p>Xatolar:</p>
+                    <span id="mistakes">0</span>
+                </div>
+                <div class="result-item">
+                    <p>Aniqlik:</p>
+                    <span id="accuracy">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistika -->
+        <div class="statistics" id="statistics" style="display: none;">
+            <h2>Statistika</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Jami o'yinlar</h3>
+                    <span id="totalGames">0</span>
+                </div>
+                <div class="stat-item">
+                    <h3>O'rtacha tezlik</h3>
+                    <span id="averageWPM">0 WPM</span>
+                </div>
+                <div class="stat-item">
+                    <h3>Eng yaxshi natija</h3>
+                    <span id="bestWPM">0 WPM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
